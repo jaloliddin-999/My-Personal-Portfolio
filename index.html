@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jaloliddin — Frontend Dasturchi va AI Menejeri</title>
+    <meta name="description" content="Jaloliddin — Frontend dasturchi (2 yil) va AI menejeri. Nozik interfeyslar va aqlli mahsulotlar yaratadi." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page">
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#intro" aria-label="Jaloliddin home">
+          <svg class="brand-logo" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+              </linearGradient>
+              <filter id="logoGlow">
+                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Outer rotating ring -->
+            <circle cx="20" cy="20" r="18" fill="none" stroke="url(#logoGrad)" stroke-width="2" opacity="0.3" class="logo-ring"/>
+            <!-- Inner geometric shape (stylized J) -->
+            <path d="M 20 6 L 28 14 L 24 14 Q 24 18 20 22 Q 16 18 16 14 L 12 14 Z" fill="url(#logoGrad)" filter="url(#logoGlow)"/>
+            <!-- Center dot -->
+            <circle cx="20" cy="20" r="3" fill="#00d4ff" class="logo-dot"/>
+          </svg>
+          <span class="brand-text">Jaloliddin</span>
+        </a>
+        <nav class="nav" role="navigation" aria-label="Primary">
+          <a href="#work">Ishlar</a>
+          <a href="#skills">Ko'nikmalar</a>
+          <a href="#ai">AI va Fikrlash</a>
+          <a href="#contact" class="cta">Bog'lanish</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="intro" class="hero" aria-labelledby="hero-heading">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1 id="hero-heading">Men nozik interfeyslarni loyihalashtiraman va quraman — AI bilan boyitilgan.</h1>
+            <p class="lede">Men <strong>Jaloliddin</strong>. Frontend dasturchi (2 yil) va AI menejeri — mahsulot fikrlashi, UX va muhandislikni birlashtirib, aqlli va foydalanishga qulay tizimlar yaratayapman.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#work">Tanlangan Ishlar</a>
+              <a class="btn ghost" href="#ai">AI Tajribalari</a>
+            </div>
+            <ul class="meta">
+              <li><strong>Lavozim:</strong> Frontend Dasturchi & AI Menejeri</li>
+              <li><strong>Joylashuv:</strong> Masofaviy / Hamkorlikka ochiq</li>
+            </ul>
+          </div>
+          <div class="hero-aside" aria-hidden="false">
+            <div class="card interactive-card" tabindex="0" id="skill-card">
+              <div class="card-inner">
+                <h3>Interactive Preview</h3>
+                <p class="muted">Hover or focus to explore a small, adaptive UI that responds like an intelligent surface.</p>
+                <div class="preview" id="adaptive-preview" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section container" aria-labelledby="about-heading">
+        <h2 id="about-heading">Haqida — Quruvchi va Strateg</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Men mahsulot interfeyslarining nozik jihatlariga va ishonchli front-end arxitekturaga e'tibor beraman. Ishim dizayn fikrlashi, yuqori samarali muhandislik va qarorlarni yaxshilovchi amaliy AI xususiyatlarini birlashtiradi.</p>
+            <p class="small">Men aniq UX, kirish imkoniyati yuqori interaksiyalar va o'lchab bo'ladigan natijalarni ustuvor qilaman. Murakkab talablarni sodda va nafis tajribalarga aylantirish menga yoqadi.</p>
+          </div>
+          <aside class="about-stats" aria-hidden="false">
+            <div class="stat">
+              <span class="num">2</span>
+              <span class="label">Yil tajriba</span>
+            </div>
+            <div class="stat">
+              <span class="num">Frontend</span>
+              <span class="label">React, Svelte, Tailwind, HTML/CSS</span>
+            </div>
+            <div class="stat">
+              <span class="num">AI</span>
+              <span class="label">Mahsulot & Operatsiyalar, tajribalar, integratsiyalar</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="work" class="section dark" aria-labelledby="work-heading">
+        <div class="container">
+          <h2 id="work-heading">Tanlangan Ishlar — Case Study</h2>
+          <div class="projects" role="list">
+            <article class="project" tabindex="0" role="listitem" data-id="1">
+              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-body">
+                <h3>Moslashuvchan Dashboard — Ishlash va AI signalari</h3>
+                <p class="muted">AI signallarini ko'rsatish bilan birga aniqlik va tezlikni saqlaydigan dashboardni loyihalash.</p>
+                <button class="link" data-open="case-1">Holat tahlilini ko'rish</button>
+              </div>
+            </article>
+
+            <article class="project" tabindex="0" role="listitem" data-id="2">
+              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-body">
+                <h3>Marketing Landing — UX-ga asoslangan tajribalar</h3>
+                <p class="muted">Matn, tartib va CTA joylashuvini takrorlash uchun A/B va mikro-tajriba ramkasi.</p>
+                <button class="link" data-open="case-2">Holat tahlilini ko'rish</button>
+              </div>
+            </article>
+
+            <article class="project" tabindex="0" role="listitem" data-id="3">
+              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-body">
+                <h3>Dizayn Tizimi — Skalalanadigan tokenlar va patternlar</h3>
+                <p class="muted">Kirish imkoniyati va muhandislik ergonomikasiga yo'naltirilgan yengil dizayn tizimi yaratildi.</p>
+                <button class="link" data-open="case-3">Holat tahlilini ko'rish</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section container" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Ko'nikmalar va Qobiliyatlar</h2>
+        <p class="muted">UX, Frontend va AI orasidagi munosabatlarni ko'rsatuvchi interaktiv xarita.</p>
+        <div class="skills-map" id="skills-map" role="region" aria-label="Skills map"></div>
+      </section>
+
+      <section id="ai" class="section" aria-labelledby="ai-heading">
+        <div class="container">
+          <h2 id="ai-heading">AI va Fikrlash</h2>
+          <div class="ai-grid">
+            <article class="ai-card">
+              <h3>Tajribalar va Fikrlashlar</h3>
+              <p class="muted">UX qarorlarini yaxshilagan va ma'noli metrikalarni yuzaga chiqargan kichik tajribalar.</p>
+              <ul>
+                <li>Signal design for dashboards</li>
+                <li>Human-in-the-loop labeling UIs</li>
+                <li>Feature flagging for progressive rollout</li>
+              </ul>
+            </article>
+            <article class="ai-card interactive">
+              <h3>Jonli Tajriba</h3>
+              <p class="muted">Sliderni sinab ko'ring — interfeys ishonchlilik thresholdiga qanday moslashishini ko'rasiz.</p>
+              <div class="experiment">
+                <input type="range" id="confidence" min="0" max="100" value="65" aria-label="Confidence slider">
+                <div id="confidence-visual" aria-hidden="true"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section container" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Bog'lanish</h2>
+        <p>Hamkorlik, konsultatsiya va mahsulot ishlari uchun mavjudman. Jiddiy takliflarga javob beraman — murojaat qiling.</p>
+        <form class="contact-form" action="mailto:you@example.com" method="get">
+          <label>Xabar <textarea name="message" rows="4" required placeholder="Salom — Menda loyiha bor..."></textarea></label>
+          <div class="form-row">
+            <label>Email <input type="email" name="email" required placeholder="siz@company.com"></label>
+            <button class="btn primary" type="submit">Yuborish</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <p class="muted">© <span id="year"></span> Jaloliddin — Frontend Dasturchi va AI Menejeri</p>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#privacy">Privacy</a>
+          <a href="#resume">Resume</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true">
+        <button class="modal-close" aria-label="Close">×</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
